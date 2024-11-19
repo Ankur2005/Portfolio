@@ -9,25 +9,31 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const PROJECTS = [
   {
+    id:1,
     title: "MoodSync",
     image: project1,
     description:
       "MoodSync is an emotion-based music recommendation system built using React JS, Flask, and Node JS. It analyzes user emotions and provides personalized music suggestions to match their mood.",
     technologies: ["HTML", "CSS", "React", "Node.js", "Flask"],
+    link:"https://github.com/Ankur2005/MOODSYNC"
   },
   {
+    id:2,
     title: "Task Management App",
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
     technologies: ["HTML", "CSS", "React", "MongoDB"],
+    link:"#"
   },
   {
+    id:3,
     title: "Portfolio Website",
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Tailwind"],
+    link:"https://github.com/Ankur2005/Portfolio"
   },
 ];
 
