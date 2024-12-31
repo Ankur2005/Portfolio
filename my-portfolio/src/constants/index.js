@@ -19,12 +19,12 @@ export const PROJECTS = [
   },
   {
     id:2,
-    title: "Task Management App",
+    title: "Employee Management System",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+      "The Employee Management System (EMS) is a web application designed to manage employee tasks and roles within an organization. It provides functionalities for both administrators and employees, allowing for efficient task assignment and management.",
     technologies: ["HTML", "CSS", "React", "MongoDB"],
-    link:"#"
+    link:"https://github.com/Ankur2005/Employee-Management-System"
   },
   {
     id:3,
