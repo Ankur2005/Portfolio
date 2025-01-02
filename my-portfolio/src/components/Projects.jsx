@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PROJECTS } from '../constants'
 import { motion } from 'framer-motion'
 
 function Projects() {
+    const [activeProject, setActiveProject] = useState(null);
+
     const redirect = (ele) => {
         window.open(ele.link, '_blank');
+    }
+
+    const toggleOverlay = (index) => {
+        setActiveProject(activeProject === index ? null : index);
     }
 
     return (
@@ -19,6 +25,7 @@ function Projects() {
                             initial={{ opacity: 0, y: 50 }} 
                             transition={{ duration: 0.5 }} 
                             className='relative m-4 w-80 h-80 bg-neutral-800 rounded-lg overflow-hidden shadow-lg'
+                            onClick={() => toggleOverlay(i)}
                         >
                             <motion.img 
                                 whileHover={{ scale: 1.1 }} 
@@ -29,6 +36,7 @@ function Projects() {
                             <motion.div 
                                 whileHover={{ opacity: 1 }} 
                                 initial={{ opacity: 0 }} 
+                                animate={{ opacity: activeProject === i ? 1 : 0 }} 
                                 className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75 text-white text-center p-4'
                             >
                                 <h3 className='text-2xl mb-2'>{e.title}</h3>
